@@ -21,12 +21,6 @@ class User {
 
 
 
-const entrenador = document.getElementById("entrenador") // div del formulario
-const idnombre = document.getElementById("idnombre") // formulario
-const username = document.getElementById("name_field") // input
-const user = new User(username) // nuevo objeto, el parametro es una variable equivalente al nombre del input
-
-const jugadordatos = [] // array datos del usuario
 
 // input name
 // function saludoEntrenador() {
@@ -50,28 +44,32 @@ const jugadordatos = [] // array datos del usuario
 //     entrenador.innerHTML = `<p>Hola ${username}!</p>`
 // }}
 // saludoEntrenador()
+const entrenador = document.getElementById("entrenador") // div del formulario
+
+let usernameinput = document.getElementById("name_field") // input
+ // nuevo objeto, el parametro es una variable equivalente al nombre del input
+
+
 
 function saludoEntrenador() {
-  //jugadordatos = JSON.parse(localStorage.getItem('user')) ?? [] // consulta el array
-  
-    if(jugadordatos.lenght == 0) { // el array esta vacio? entonces muestra formulario
-      // si el array tiene datos
-      username = JSON.parse(localStorage.getItem('user'))
-      entrenador.innerHTML = `<p>Hola ${username}!</p>`
-    } else { 
-      
-      entrenador.innerHTML = `<form id="idnombre" class="inputname">
-      <label for="name_field">Ingrese nombre del Entrenador</label>
-      <input type="text" id="name_field" class="nes-input" required>
-      <button class="nes-btn is-success" type="submit">Guardar</button>
-    </form>`
-      idnombre.addEventListener('submit', (e) => { //y su evento submit
+  const jugadordatos = JSON.parse(localStorage.getItem('user')) ?? [] // consulta el array
+  console.log(jugadordatos)
+  let idnombre = document.getElementById("idnombre")
+    if(jugadordatos.length == 0) { // el array esta vacio? entonces muestra formulario
+      idnombre.addEventListener("submit", (e) => {
         e.preventDefault()
-          user.username = document.getElementById("name_field").value // asigna a la variable del input al objeto
+          let username = document.getElementById("name_field").value // asigna a la variable del input al objeto
+          const user = new User(username)
           localStorage.setItem('user', JSON.stringify(user))
           jugadordatos.push(user) // push array con el objeto
           entrenador.innerHTML = "" //limpia el div
-          entrenador.innerHTML = `<p>Hola ${username}!</p>`}) // muestra el saludo
+          entrenador.innerHTML = `<p>Hola ${username}!</p>`
+        }) 
+    } else { // si el array tiene datos
+      idnombre.classList.add("inputnamehidden")
+      const user = JSON.parse(localStorage.getItem('user'))
+      console.log(user.username)
+      entrenador.innerHTML = `<p>Hola ${user.username}!</p>`
   }}
   saludoEntrenador()
 
