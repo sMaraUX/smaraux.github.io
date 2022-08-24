@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+}
+
+body {
+    
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+p {
+    font-size: 10px;
+}
+
+.conteiner {
+    display: flex;
+    margin:20px;
+    width: 1500px;
+    padding: 20px;
+
+}
+
+h2 {
+   display: block;
+   width: max-content;
+   height: auto;
+   padding: 50px;
+}
+
+
+
+
+.pokebola1_close {
+    background-image: url('Pokeball.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola1_open {
+    background-image: url('Pikachu.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola2_close {
+    background-image: url('Pokeball.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola2_open {
+    background-image: url('Charmander.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola3_close {
+    background-image: url('Pokeball.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola3_open {
+    background-image: url('Squirtle.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola4_close {
+    background-image: url('Pokeball.png');;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.pokebola4_open {
+    background-image: url('Bulbasaur.png');;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+.cardremove {
+    display: none;
+    align-content: center;
+    align-self: center;
+    justify-content: space-between;
+    background-color: white;
+    opacity: 100%
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    justify-content: space-between;
+    background-color: white;
+    opacity: 100%;
+    margin-left: 50px;
+    padding: 15px;
+    
+}
+
+button {
+    background-color: indianred;
+    color: white;
+    border: 0vh;
+    height: 60px;
+    width: 180px;
+}
+
+.nes-conteiner {
+    width: 800px;
+}
+
+.nombrejugador {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.inputnamehidden {
+    display: hidden;
+}
+@import "./node_modules/nes.css/css/nes.css";
